@@ -208,6 +208,8 @@ def diagnose(request: DiagnoseRequest):
             f.write(f"symptom 1 :{s1} \n")
             f.write(f"symptom 2 :{s2} \n")
             f.write(f"disease :{found_disease} \n")
+            f.write(f"\n")
+            f.write(f" '- -'*20,\n")
 
         return {"disease": found_disease, "message": f"Disease found: {found_disease}"}
     else:
