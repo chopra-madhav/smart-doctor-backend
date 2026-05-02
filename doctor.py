@@ -32,8 +32,8 @@ def diagnose(request: DiagnoseRequest):
     if len(request.symptoms) < 2:
         return {"error": "Please provide at least 2 symptoms in the list."}
 
-    s1 = request.symptoms[0].lower().trim()
-    s2 = request.symptoms[1].lower().trim()
+    s1 = request.symptoms[0].lower().strip()
+    s2 = request.symptoms[1].lower().strip()
 
     found_disease = None
 
